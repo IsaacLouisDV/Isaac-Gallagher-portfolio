@@ -338,3 +338,18 @@ img {
   height: auto;
   display: block;
 }
+
+/* ===== CADRES SANS BANDEAUX BLANCS ===== */
+.galerie-cadre {
+  background: none;    /* plus de fond blanc */
+  padding: 0;          /* plus de marge intérieure */
+  aspect-ratio: auto;  /* le cadre suit la forme de l'image */
+  height: auto;
+}
+
+.galerie-cadre img {
+  display: block;      /* supprime le petit espace sous l'image */
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* l'image est toujours affichée en entier */
+}
