@@ -146,13 +146,6 @@ html {
   display: block;
 }
 
-.comics-double img {
-  width: 100%;
-  height: auto;                  /* garde les proportions */
-  display: block;
-  border: 1px solid #b8a898;     /* fin contour, comme sur la maquette */
-}
-
 /* ===== Galerie Character Design ===== */
 .galerie-chara {
   display: flex;
