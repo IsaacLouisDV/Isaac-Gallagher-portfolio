@@ -106,3 +106,89 @@ h1 a {
   color: inherit;
   text-decoration: none;
 }
+
+/* ===== Défilement doux pour "Back to top" ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Liens "More…" ===== */
+.lien-more {
+  display: block;
+  text-align: center;
+  margin: 20px 0 50px;
+  font-size: 1.2rem;
+  color: #5c4a3d;
+  text-decoration: none;
+}
+
+.lien-more:hover {
+  text-decoration: underline;
+}
+
+/* ===== Galerie Comics ===== */
+.galerie-comics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 colonnes */
+  gap: 20px;
+}
+
+.cadre-blanc {
+  background-color: #ffffff;
+  padding: 12px;
+  border: 1px solid #b8a898;
+}
+
+.cadre-blanc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Le cadre qui contient 2 planches côte à côte */
+.cadre-blanc.double {
+  grid-column: 1 / -1;  /* prend toute la largeur */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ===== Galerie Character Design ===== */
+.galerie-chara {
+  display: flex;
+  flex-direction: column;  /* images empilées */
+  gap: 20px;
+}
+
+.galerie-chara img {
+  width: 100%;
+  display: block;
+  border: 1px solid #b8a898;
+}
+
+/* ===== Bannière du bas ===== */
+.pied-de-page {
+  background-color: #5c4a3d;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.pied-de-page a {
+  color: #f3e5d0;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.pied-de-page a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Sur petit écran (téléphone) ===== */
+@media (max-width: 600px) {
+  .galerie-comics,
+  .cadre-blanc.double {
+    grid-template-columns: 1fr;  /* tout passe sur 1 colonne */
+  }
+}
