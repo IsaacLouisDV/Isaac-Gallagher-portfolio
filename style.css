@@ -192,3 +192,139 @@ html {
     grid-template-columns: 1fr;  /* tout passe sur 1 colonne */
   }
 }
+
+/* ===== Page Contact : About me ===== */
+.about {
+  background-color: #ffffff;
+  border: 1px solid #b8a898;
+  display: flex;
+  align-items: stretch;
+  margin: 30px 0;
+  overflow: hidden;              /* rien ne dépasse du cadre */
+}
+
+.about-portrait {
+  width: 42%;
+  align-self: flex-end;          /* portrait collé en bas du cadre */
+  display: block;
+}
+
+.about-texte {
+  flex: 1;
+  text-align: right;
+  padding: 50px 50px 50px 20px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #3b2f26;
+  align-self: center;
+}
+
+.lettrine {
+  font-size: 2.2em;
+  font-weight: bold;
+  line-height: 0;                /* évite de décaler la ligne */
+}
+
+/* ===== Macarons ===== */
+.macarons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.macarons a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #5c4a3d;
+  color: #f3e5d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.macarons a:hover {
+  transform: scale(1.1);
+  background-color: #8a6f5a;
+}
+
+/* ===== Formulaire ===== */
+.formulaire {
+  background-color: #574331;
+  max-width: 520px;
+  margin: 40px auto 60px;        /* centré */
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulaire label {
+  color: #f3e5d0;
+  font-size: 1.2rem;
+  margin: 15px 0 8px;
+}
+
+.formulaire input,
+.formulaire textarea {
+  background-color: #776553;
+  border: 1px solid #a8907a;
+  color: #f3e5d0;
+  padding: 10px 14px;
+  font-family: inherit;          /* garde la police Almendra */
+  font-size: 1rem;
+}
+
+.formulaire input::placeholder,
+.formulaire textarea::placeholder {
+  color: #c4b29c;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  outline: 2px solid #f3e5d0;    /* contour clair quand on écrit dedans */
+}
+
+.formulaire textarea {
+  resize: vertical;              /* agrandissable seulement en hauteur */
+}
+
+.formulaire button {
+  margin-top: 35px;
+  padding: 14px;
+  background-color: #f3e5d0;
+  color: #3b2f26;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formulaire button:hover {
+  background-color: #ffffff;
+}
+
+/* ===== Contact sur téléphone ===== */
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column-reverse;   /* texte au-dessus, portrait en dessous */
+  }
+  .about-portrait {
+    width: 70%;
+    align-self: flex-start;
+  }
+  .about-texte {
+    text-align: center;
+    padding: 30px 20px 10px;
+    font-size: 1.1rem;
+  }
+  .formulaire {
+    padding: 20px;
+    margin: 30px 15px 50px;
+  }
+}
