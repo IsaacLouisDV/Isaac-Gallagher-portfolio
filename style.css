@@ -146,11 +146,6 @@ html {
   display: block;
 }
 
-/* ===== Comics : double page en pleine largeur ===== */
-.comics-double {
-  grid-column: 1 / -1;           /* occupe les deux colonnes */
-}
-
 .comics-double img {
   width: 100%;
   height: auto;                  /* garde les proportions */
@@ -331,4 +326,22 @@ html {
     padding: 20px;
     margin: 30px 15px 50px;
   }
+}
+
+/* ===== Sécurité : aucune image ne dépasse du site ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Comics : double page en pleine largeur ===== */
+.comics-double {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.comics-double img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
