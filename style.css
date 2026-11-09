@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: #F3E6D0;
+  color: #3B2E27;
+  font-family: 'Almendra', serif;
+}
+
+/* Bandeau brun en haut */
+.bandeau {
+  background: #5C4A3F;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.bandeau h1 {
+  margin: 0;
+  color: #E8D8C0;
+  font-weight: 400;
+  font-size: 42px;
+}
+
+/* Menu */
+.menu {
+  text-align: center;
+  padding: 18px 10px;
+}
+
+.menu a {
+  color: #5C4A3F;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Contenu central */
+main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.5;
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+/* Titre de section avec traits de chaque côté */
+.titre-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 50px 0 25px;
+}
+
+.titre-section::before,
+.titre-section::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #8C7B6E;
+}
+
+/* Galerie d'images */
+.galerie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.galerie img {
+  width: 100%;
+  display: block;
+}
+
+.galerie .large {
+  grid-column: 1 / -1;
+}
+
+/* Lien More */
+.more {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #5C4A3F;
+  text-decoration: none;
+}
+
+/* Sur téléphone : une seule colonne */
+@media (max-width: 600px) {
+  .galerie {
+    grid-template-columns: 1fr;
+  }
+}
