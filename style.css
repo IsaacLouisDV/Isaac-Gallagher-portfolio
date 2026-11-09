@@ -146,12 +146,16 @@ html {
   display: block;
 }
 
-/* Le cadre qui contient 2 planches côte à côte */
-.cadre-blanc.double {
-  grid-column: 1 / -1;  /* prend toute la largeur */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+/* ===== Comics : double page en pleine largeur ===== */
+.comics-double {
+  grid-column: 1 / -1;           /* occupe les deux colonnes */
+}
+
+.comics-double img {
+  width: 100%;
+  height: auto;                  /* garde les proportions */
+  display: block;
+  border: 1px solid #b8a898;     /* fin contour, comme sur la maquette */
 }
 
 /* ===== Galerie Character Design ===== */
