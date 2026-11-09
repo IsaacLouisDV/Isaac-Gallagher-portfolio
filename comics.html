@@ -1,37 +1,84 @@
-<!DOCTYPE html>	
-<html lang="fr">	
-<head>	
-  <meta charset="UTF-8">	
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
-  <title>Isaac Gallagher – Portfolio</title>	
-  <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">	
-  <link rel="stylesheet" href="style.css">	
-</head>	
-<body>	
-	
-  <header class="bandeau">	
-        <header id="haut">
-<h1><a href="index.html">Isaac Gallagher</a></h1>	
-  </header>	
-	
-  <nav class="menu">	
-    <a href="illustration.html">Illustration</a>	
-    <a href="comics.html">Comics</a>	
-    <a href="character-design.html">Character Design</a>	
-    <a href="contact.html">Contact</a>	
-  </nav>	
-	
-  <main>
-	
-    <h2 class="titre-section"><span>Comics</span></h2>	
-	
-    <div class="galerie">	
-      <img src="images/illustration-1.jpg" alt="Illustration 1">	
-      <img src="images/illustration-2.jpg" alt="Illustration 2">	
-      <img src="images/illustration-3.jpg" alt="Illustration 3" class="large">	
-    </div>	
-	
-  </main>	
-	
-</body>	
-</html>	
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comics – Isaac Gallagher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Réglages propres à la page Comics -->
+  <style>
+    /* Pages jamais rognées */
+    .galerie-comics .galerie-cadre img {
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Page seule centrée */
+    .galerie-cadre.centre {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+   <header class="bandeau">
+  <header id="haut">
+    </header>
+    <h1><a href="index.html">Isaac Gallagher</a></h1>
+  </header>
+
+  <!-- ===== MENU ===== -->
+  <nav>
+    <a href="illustration.html">Illustration</a>
+    <a href="comics.html">Comics</a>
+    <a href="character-design.html">Character Design</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ===== TITRE ===== -->
+  <h2 class="titre-section"><span>Comics</span></h2>
+
+  <!-- ===== GALERIE ===== -->
+  <main class="galerie galerie-comics">
+
+    <!-- Ligne 1 : double page (une seule image) -->
+    <div class="galerie-cadre large">
+      <img src="images/comic-1.jpeg" alt="Double page de comic">
+    </div>
+
+    <!-- Ligne 2 : deux pages -->
+    <div class="galerie-cadre">
+      <img src="images/comic-2.jpeg" alt="Page de comic 2">
+    </div>
+    <div class="galerie-cadre">
+      <img src="images/comic-3.jpeg" alt="Page de comic 3">
+    </div>
+
+    <!-- Ligne 3 : deux pages -->
+    <div class="galerie-cadre">
+      <img src="images/comic-4.jpeg" alt="Page de comic 4">
+    </div>
+    <div class="galerie-cadre">
+      <img src="images/comic-5.jpeg" alt="Page de comic 5">
+    </div>
+
+    <!-- Ligne 4 : une page seule, centrée -->
+    <div class="galerie-cadre centre">
+      <img src="images/comic-6.jpeg" alt="Page de comic 6">
+    </div>
+
+  </main>
+
+  <!-- ===== BAS DE PAGE ===== -->
+  <footer class="pied-de-page">
+    <a href="#haut">Back to top! ^</a>
+  </footer>
+
+</body>
+</html>
